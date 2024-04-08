@@ -26,11 +26,11 @@ class Activity(Base):
     classification_system: Mapped[str]
     classification_value: Mapped[str]
     geography_shortname: Mapped[str]
-    geography_comments: Mapped[str]
+    # geography_comments: Mapped[str]
     time_period_start_data: Mapped[str]
     time_period_end_data: Mapped[str]
     time_period_is_data_valid_for_entire_period: Mapped[str]
-    time_period_comments: Mapped[str]
+    # time_period_comments: Mapped[str]
 
     def __repr__(self) -> str:
         return f"User(id={self.id!r}, name={self.activity_name!r})"
@@ -66,6 +66,6 @@ class ElementaryExchange(Base):
     def __repr__(self) -> str:
         return f"ElementaryExchange(id={self.id!r}, exchange_name={self.exchange_name!r})"
 
-
-Base.metadata.drop_all(engine)
-Base.metadata.create_all(engine)
+if __name__ == "__main__":
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
