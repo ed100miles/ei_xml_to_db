@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ei"
+version = "0.1.0"
+description = "practice extracting ei data"
+authors = ["ed"]
+license = "nah"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+SQLAlchemy = "^2.0.29"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+black = "^24.3.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
